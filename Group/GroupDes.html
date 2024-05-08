@@ -26,12 +26,12 @@
     <header>
         <a href="#" class="logo"><img src="logo-removebg-preview.png" alt="Logo"></a>
     
-        <ul class="navmenu" id="home">
+        <ul class="navmenu">
             <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
             <li><a href="#trending">Products</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Pricelist</a></li>
         </ul>
         <input type="text" placeholder="Search..." style="width: 200px;">
     
@@ -96,6 +96,7 @@
                         
                         <input type="number" id="quantityInput" placeholder="Quantity" min="0" style="margin-right: 2px;">
                         <button id="addToCartButton"><i class='bx bxs-cart-alt'style="font-size: 20px;"></i></button>
+                        <button class="removeFromCart"><i class='bx bxs-trash' style="font-size: 20px;"></i></button>
                     </form>
                 </div>
             </div>
@@ -122,6 +123,7 @@
                     <form>
                         <input type="number" id="quantityInput" placeholder="Quantity" min="0" style="margin-right: 2px;">
                         <button id="addToCartButton"><i class='bx bxs-cart-alt'style="font-size: 20px;"></i></button>
+                        <button class="removeFromCart2"><i class='bx bxs-trash' style="font-size: 20px;"></i></button>
                     </form>
                 </div>
             </div>
@@ -147,6 +149,7 @@
                     <form>
                         <input type="number" id="quantityInput" placeholder="Quantity" min="0" style="margin-right: 2px;">
                         <button id="addToCartButton"><i class='bx bxs-cart-alt'style="font-size: 20px;"></i></button>
+                        <button class="removeFromCart3"><i class='bx bxs-trash' style="font-size: 20px;"></i></button>
                     </form>
                 </div>
             </div>
@@ -174,6 +177,7 @@
                     <form>
                         <input type="number" id="quantityInput" placeholder="Quantity" min="0" style="margin-right: 2px;">
                         <button id="addToCartButton"><i class='bx bxs-cart-alt'style="font-size: 20px;"></i></button>
+                        <button class="removeFromCart4"><i class='bx bxs-trash' style="font-size: 20px;"></i></button>
                     </form>
                 </div>
             </div>
@@ -200,6 +204,7 @@
                     <form>
                         <input type="number" id="quantityInput" placeholder="Quantity" min="0" style="margin-right: 2px;">
                         <button id="addToCartButton"><i class='bx bxs-cart-alt'style="font-size: 20px;"></i></button>
+                        <button class="removeFromCart5"><i class='bx bxs-trash' style="font-size: 20px;"></i></button>
                     </form>
                 </div>
             </div>
@@ -224,6 +229,7 @@
                     <p>₱3,300.00</p></a> <form>
                         <input type="number" id="quantityInput" placeholder="Quantity" min="0" style="margin-right: 2px;">
                         <button id="addToCartButton"><i class='bx bxs-cart-alt'style="font-size: 20px;"></i></button>
+                        <button class="removeFromCart6"><i class='bx bxs-trash' style="font-size: 20px;"></i></button>
                     </form>
                 </div>
             </div>
@@ -249,6 +255,7 @@
                     <form>
                         <input type="number" id="quantityInput" placeholder="Quantity" min="0" style="margin-right: 2px;">
                         <button id="addToCartButton"><i class='bx bxs-cart-alt'style="font-size: 20px;"></i></button>
+                        <button class="removeFromCart7"><i class='bx bxs-trash' style="font-size: 20px;"></i></button>
                     </form>
                 </div>
             </div>
@@ -274,6 +281,7 @@
                     <form>
                         <input type="number" id="quantityInput" placeholder="Quantity" min="0" style="margin-right: 2px;">
                         <button id="addToCartButton"><i class='bx bxs-cart-alt'style="font-size: 20px;"></i></button>
+                        <button class="removeFromCart8"><i class='bx bxs-trash' style="font-size: 20px;"></i></button>
                     </form>
                     
                 </div>
@@ -302,7 +310,8 @@
                     <form>
                         <input type="number" id="quantityInput" placeholder="Quantity" min="0" style="margin-right: 2px;">
                         <button id="addToCartButton"><i class='bx bxs-cart-alt' style="font-size: 20px;"></i></button>
-                        <button class="removeFromCartButton"><i class='bx bx-trash-alt' style="font-size: 20px;"></i></button>
+                        <button class="removeFromCart9"><i class='bx bxs-trash' style="font-size: 20px;"></i></button>
+
                     </form>
                 </div>
             </div>
@@ -311,8 +320,8 @@
                     <h2>My Cart</h2>
                     <ul id="cartItemsList"></ul>
                     <div class="cart-total">
-                     
                         <p>Total Amount: <span class="total-amount">₱0.00</span></p>
+                        <button id="checkoutButton" style="text-align: left;">Checkout</button>
                     </div>
                 </div>
             </div>
@@ -456,7 +465,6 @@
         const li = document.createElement('li');
         li.innerHTML = `
             <h4><img src="${item.image}" width="250px"><br>${item.name}<br><span style="color:black;">${item.price}</span><br>Quantity: ${item.quantity}</h4>
-            <button onclick="removeFromCart(${index})">Remove</button>
         `;
         cartItemsList.appendChild(li);
     });
@@ -467,7 +475,41 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     const addToCartButtons = document.querySelectorAll('#addToCartButton');
+    const removeFromCartButtons = document.querySelectorAll('.removeFromCart'); // Select remove buttons
+    const removeFromCart2Buttons = document.querySelectorAll('.removeFromCart2'); // Select remove buttons
+    const removeFromCart3Buttons = document.querySelectorAll('.removeFromCart3'); // Select remove buttons
+    const removeFromCart4Buttons = document.querySelectorAll('.removeFromCart4'); // Select remove buttons
+    const removeFromCart5Buttons = document.querySelectorAll('.removeFromCart5'); // Select remove buttons
+    const removeFromCart6Buttons = document.querySelectorAll('.removeFromCart6'); // Select remove buttons
+    const removeFromCart7Buttons = document.querySelectorAll('.removeFromCart7'); // Select remove buttons
+    const removeFromCart8Buttons = document.querySelectorAll('.removeFromCart8'); // Select remove buttons
+    const removeFromCart9Buttons = document.querySelectorAll('.removeFromCart9'); // Select remove buttons
     const cartContainer = document.querySelector('.cart-container');
+    const checkoutButton = document.getElementById('checkoutButton');
+
+    // Add event listeners for remove buttons
+    function addRemoveButtonListeners(buttons) {
+        buttons.forEach((button, index) => {
+            button.addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent default form submission or link navigation
+                removeFromCart(index);
+            });
+        });
+    }
+
+    addRemoveButtonListeners(removeFromCartButtons);
+    addRemoveButtonListeners(removeFromCart2Buttons);
+    addRemoveButtonListeners(removeFromCart3Buttons);
+    addRemoveButtonListeners(removeFromCart4Buttons);
+    addRemoveButtonListeners(removeFromCart5Buttons);
+    addRemoveButtonListeners(removeFromCart6Buttons);
+    addRemoveButtonListeners(removeFromCart7Buttons);
+    addRemoveButtonListeners(removeFromCart8Buttons);
+    addRemoveButtonListeners(removeFromCart9Buttons);
+
+    checkoutButton.addEventListener('click', () => {
+        alert('Redirecting to checkout page...');
+    });
 
     addToCartButtons.forEach((button, index) => {
         button.addEventListener('click', (event) => {
