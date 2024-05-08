@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOEPHORIA</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <style>
+        .cart-container .cart-total p,
+        .cart-container .total-amount {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <a href="#" class="logo"><img src="logo-removebg-preview.png" alt="Logo"></a>
+    
+        <ul class="navmenu" id="home">
+            <li><a href="#">Home</a></li>
+            <li><a href="#trending">Products</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <input type="text" placeholder="Search..." style="width: 200px;">
+    
+        <!-- Cart button -->
+        <div class="cart-container">
+            <button id="cartButton"><i class='bx bx-cart'></i><p>Cart</p></button>
+            <div class="cart-items">0</div>
+        </div>
+        
+        
+        
+        </div>
+        <div class="nav-icon">
+            <a href="#" id="searchToggle"></a>
+            <div class="search-bar" id="searchBar">
+                
+                <!-- You can add additional search bar elements here -->
+            </div>
+            <button class="profile"><i class='bx bx-user'></i>Login/SignUp</button>
+        </div>
+        
+    </header>
+    <section class="main-home">
+        <div class="main-text">
+            <h5>Power Up Your PC Experience</h5>
+            <h1>Unleash Your Gaming Beast with Our Rigs</h1>
+            <p>We build Dreams.</p>
+            <a href="#trending" class="main-btn">SHOP NOW <i class='bx bx-right-arrow-alt'></i></a>
+        </div>
+        <div class="image-container">
+            <img src="pc.png" alt="Image 1" class="image">
+            
+        </div>
+    </section>
+    
+    
+    <section class="trending-product" id="trending">
+        <div class="center-text">
+            <h2>FEATURED <span>PRODUCTS</span></h2>
+        </div> 
+        <div class="products">
+            <div class="row"><a href="nitro-item.html">
+                <img src="nitro.webp" alt="">
+                <div class="product-text">
+                    <h5>sale</h5>
+                </div>
+                <div class="heart icon">
+                    <i class='bx bx-heart' ></i>
+                </div>
+                <div class="rating">
+                    <i class='bx bx-star' ></i>
+                    <i class='bx bx-star' ></i>
+                    <i class='bx bx-star' ></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                </div>
+                <div class="price">
+                    <h4>Nitro 5 AN515-58-78EN</h4>
+                    
+                    <p> ₱73,149.00</p></a>
+                    <form>
+                        
+                        <input type="number" id="quantityInput" placeholder="Quantity" min="0" style="margin-right: 2px;">
+                        <button id="addToCartButton"><i class='bx bxs-cart-alt'style="font-size: 20px;"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="row"><a href="predator-item.html">
+                <img src="predator.webp" alt="">
+                <div class="product-text">
+                    <h5>sale</h5>
+                </div>
+                <div class="heart icon">
+                    <i class='bx bx-heart' ></i>
+                </div>
+                <div class="rating">
+                    <i class='bx bxs-star-half' ></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                </div>
+                <div class="price">
+                    <h4>Predator Helios Neo </h4>
+                    
+                    <p>₱75,999.00</p></a>
+                    <form>
+                        <input type="number" id="quantityInput" placeholder="Quantity" min="0" style="margin-right: 2px;">
+                        <button id="addToCartButton"><i class='bx bxs-cart-alt'style="font-size: 20px;"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="row"><a href="nitro1-item.html">
+                <img src="nitro1.webp" alt="">
+                <div class="product-text">
+                    <h5>sale</h5>
+                </div>
+                <div class="heart icon">
+                    <i class='bx bx-heart' ></i>
+                </div>
+                <div class="rating">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                </div>
+                <div class="price">
+                    <h4>Nitro V ANV15-51-519K </h4>
+                    
+                    <p> ₱48,999.00</p></a>
+                    <form>
+                        <input type="number" id="quantityInput" placeholder="Quantity" min="0" style="margin-right: 2px;">
+                        <button id="addToCartButton"><i class='bx bxs-cart-alt'style="font-size: 20px;"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="row"><a href="mon1-item.html">
+                <img src="mon1.webp" alt="">
+                <div class="product-text">
+                    <h5>sale</h5>
+                </div>
+                <div class="heart icon">
+                    <i class='bx bx-heart' ></i>
+                </div>
+                <div class="rating">
+
+                    <i class='bx bx-star' ></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    
+                    <i class='bx bxs-star-half' ></i>
+                </div>
+                <div class="price">
+                    <h4>Acer Gaming EI242QR P</h4>
+                    
+                    <p>₱11,399.00</p></a>
+                    <form>
+                        <input type="number" id="quantityInput" placeholder="Quantity" min="0" style="margin-right: 2px;">
+                        <button id="addToCartButton"><i class='bx bxs-cart-alt'style="font-size: 20px;"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="row"><a href="mouse-item.html">
+                <img src="mouse.webp" alt="">
+                <div class="product-text">
+                    <h5>sale</h5>
+                </div>
+                <div class="heart icon">
+                    <i class='bx bx-heart' ></i>
+                </div>
+                <div class="rating">
+                    <i class='bx bxs-star-half' ></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    
+                </div>
+                <div class="price">
+                    <h4>Predator Cestus 350 PMR910</h4>
+                    
+                    <p>₱4,999.00</p></a>
+                    <form>
+                        <input type="number" id="quantityInput" placeholder="Quantity" min="0" style="margin-right: 2px;">
+                        <button id="addToCartButton"><i class='bx bxs-cart-alt'style="font-size: 20px;"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="row"><a href="woo-item.html">
+                <img src="woo.webp" alt="">
+                <div class="product-text">
+                    <h5>sale</h5>
+                </div>
+                <div class="heart icon">
+                    <i class='bx bx-heart' ></i>
+                </div>
+                <div class="rating">
+                    <i class='bx bx-star' ></i>
+                    <i class='bx bx-star' ></i>
+                    <i class='bx bx-star' ></i>
+                    <i class='bx bx-star' ></i>
+                    <i class='bx bxs-star-half' ></i>
+                </div>
+                <div class="price">
+                    <h4 style="font-size: 15px;">RK84 75% Mechanical Keyboard</h4>
+                    
+                    <p>₱3,300.00</p></a> <form>
+                        <input type="number" id="quantityInput" placeholder="Quantity" min="0" style="margin-right: 2px;">
+                        <button id="addToCartButton"><i class='bx bxs-cart-alt'style="font-size: 20px;"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="row"><a href="head-Photoroom-item.html">
+                <img src="head-Photoroom.png" alt="">
+                <div class="product-text">
+                    <h5>sale</h5>
+                </div>
+                <div class="heart icon">
+                    <i class='bx bx-heart' ></i>
+                </div>
+                <div class="rating">
+                    <i class='bx bx-star' ></i>
+                    <i class='bx bx-star' ></i>
+                    <i class='bx bx-star' ></i>
+                    <i class='bx bx-star' ></i>
+                    <i class='bx bxs-star-half' ></i>
+                </div>
+                <div class="price">
+                    <h4>Predator Galea 350 PHW920</h4>
+                    
+                    <p>₱3,999.00</p></a>
+                    <form>
+                        <input type="number" id="quantityInput" placeholder="Quantity" min="0" style="margin-right: 2px;">
+                        <button id="addToCartButton"><i class='bx bxs-cart-alt'style="font-size: 20px;"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="row"><a href="pred-removebg-item.html">
+                <img src="pred-removebg.png" alt="">
+                <div class="product-text">
+                    <h5>sale</h5>
+                </div>
+                <div class="heart icon">
+                    <i class='bx bx-heart' ></i>
+                </div>
+                <div class="rating">
+                    <i class='bx bx-star' ></i>
+                    <i class='bx bx-star' ></i>
+                    <i class='bx bx-star' ></i>
+                    <i class='bx bx-star' ></i>
+                    <i class='bx bxs-star-half' ></i>
+                </div>
+                <div class="price">
+                    <h4>Predator 15 | G9-593-74EL</h4>
+                    
+                    <p>₱110,999.00</p></a>
+                    <form>
+                        <input type="number" id="quantityInput" placeholder="Quantity" min="0" style="margin-right: 2px;">
+                        <button id="addToCartButton"><i class='bx bxs-cart-alt'style="font-size: 20px;"></i></button>
+                    </form>
+                    
+                </div>
+            </div>
+            
+            <div class="row"><a href="key-item.html">
+                <img src="key.jpg" alt="">
+                <div class="product-text">
+                    <h5>sale</h5>
+                </div>
+                <div class="heart icon">
+                    <i class='bx bx-heart' ></i>
+                </div>
+                <div class="rating">
+                    <i class='bx bx-star' ></i>
+                    <i class='bx bx-star' ></i>
+                    <i class='bx bx-star' ></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                </div>
+                <div class="price">
+                    <h4>G92 one-handed keyboard</h4>
+                        
+                    <p> ₱299.00</p></a>
+                </div>
+                    <form>
+                        <input type="number" id="quantityInput" placeholder="Quantity" min="0" style="margin-right: 2px;">
+                        <button id="addToCartButton"><i class='bx bxs-cart-alt' style="font-size: 20px;"></i></button>
+                        <button class="removeFromCartButton"><i class='bx bx-trash-alt' style="font-size: 20px;"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="cart-container">
+                <div class="sidebar">
+                    <h2>My Cart</h2>
+                    <ul id="cartItemsList"></ul>
+                    <div class="cart-total">
+                     
+                        <p>Total Amount: <span class="total-amount">₱0.00</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SERVICES -->
+            <section class="services" id="services">
+                <h1 class="heading">Our Services <span>Quality Guarantee</span></h1>
+              
+                <div class="service-container">
+                  <div class="service">
+                    <i class="fas fa-truck"></i>
+                    <h3>Fast Delivery</h3>
+                    <p class="description">Get your products delivered quickly and safely</p>
+                    <p>Our fast delivery service ensures that your products arrive at your doorstep in no time. We prioritize speed and safety to give you the best delivery experience possible.</p>
+                  </div>
+              
+                  <div class="service">
+                    <i class="fas fa-headset"></i>
+                    <h3>Customer Support</h3>
+                    <p class="description">24/7 support for all your queries and concerns</p>
+                    <p>Our dedicated customer support team is available 24/7 to assist you with any questions or concerns you may have. We are committed to providing the best support for our customers.</p>
+                  </div>
+              
+                  <div class="service">
+                    <i class="fas fa-wrench"></i>
+                    <h3>Repairs & Upgrades</h3>
+                    <p class="description">Expert repairs and upgrades for your devices</p>
+                    <p>Our team of experts specializes in repairs and upgrades for all types of devices. Whether you need a quick fix or a major upgrade, we have the skills and knowledge to get the job done right.</p>
+                  </div>
+                </div>
+              </section>
+              
+              
+        
+            <!-- ABOUT -->
+            <section class="about-section" id="about">
+                
+                <p>is your dedicated guide in the world of PCs. Our team, composed of freshmen students from Holy Cross College, is passionate about delivering the best PC solutions for your needs. We understand the importance of a reliable and efficient PC, and we are here to ensure you get the right advice and support.</p>
+                
+                <h3>Why Choose Us?</h3>
+                <ul>
+                  <li><span class="highlight">Fresh Perspective:</span> As freshmen, we bring a fresh perspective to the world of PC technology, eager to innovate and provide the best solutions.</li>
+                  <li><span class="highlight">Expertise:</span> Despite being students, we are well-versed in the latest trends and technologies, ensuring you get expert advice for your PC needs.</li>
+                  <li><span class="highlight">Commitment:</span> This project is our final examination output, demonstrating our commitment to excellence and ensuring you receive top-notch service.</li>
+                </ul>
+                
+                <p class="promise">Our Promise: Count on us for a seamless shopping experience and reliable support for all your PC needs. Join us on this journey, and let's build the perfect PC together!</p>
+                
+                <a href="#" class="button">Learn More</a>
+              </section>
+            
+        
+            <!-- CONTACT -->
+            <section class="contact" id="contact">
+                <h1 class="heading">Contact Us <span>Get in Touch</span></h1>
+        
+                <div class="contact-form">
+                    <form action="">
+                        <input type="text" placeholder="Name" class="box">
+                        <input type="email" placeholder="Email" class="box">
+                        <input type="tel" placeholder="Phone Number" class="box">
+                        <textarea name="message" id="" cols="30" rows="5" placeholder="Message" class="box"></textarea>
+                        <input type="submit" value="Send Message" class="btn">
+                    </form>
+                </div>
+            </section>
+            <section class="footer">
+                <div class="footer-container">
+                    <div class="footer-box">
+                        <h3>Our Location</h3>
+                        <p>Arayat, Pampanga</p>
+                    </div>
+            
+                    <div class="footer-box">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#trending">Products</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+            
+                    <div class="footer-box">
+                        <h3>Follow Us</h3>
+                        <ul>
+                            <li><a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#" class="social-icon"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#" class="social-icon"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            
+        
+            <script>
+                let cartItems = []; // Declare cartItems globally
+
+        function updateCartCount() {
+            const cartItemsCount = document.querySelector('.cart-items');
+            cartItemsCount.innerText = cartItems.length;
+        }
+
+        function addToCart(item) {
+    // Check if the item already exists in the cart
+    const existingItemIndex = cartItems.findIndex(cartItem => cartItem.name === item.name);
+
+    if (existingItemIndex !== -1) {
+        // Item already exists, update quantity
+        cartItems[existingItemIndex].quantity = item.quantity; // Update quantity to the input value
+    } else {
+        // Item doesn't exist, add it to the cart
+        cartItems.push(item);
+    }
+
+    updateCartCount();
+    displayCartItems();
+}
+
+        function removeFromCart(index) {
+            cartItems.splice(index, 1);
+            updateCartCount();
+            displayCartItems();
+        }
+
+        function calculateTotalAmount() {
+            let total = 0;
+            cartItems.forEach(item => {
+                const price = parseFloat(item.price.replace(/[^\d.]/g, ''));
+                total += price * item.quantity; // Multiply price by quantity
+            });
+            return total.toFixed(2);
+        }
+        function displayCartItems() {
+    const cartItemsList = document.getElementById('cartItemsList');
+    cartItemsList.innerHTML = '';
+    cartItems.forEach((item, index) => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+            <h4><img src="${item.image}" width="250px"><br>${item.name}<br><span style="color:black;">${item.price}</span><br>Quantity: ${item.quantity}</h4>
+            <button onclick="removeFromCart(${index})">Remove</button>
+        `;
+        cartItemsList.appendChild(li);
+    });
+
+    const totalAmountElement = document.querySelector('.total-amount');
+    totalAmountElement.innerText = `$${calculateTotalAmount()}`;
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const addToCartButtons = document.querySelectorAll('#addToCartButton');
+    const cartContainer = document.querySelector('.cart-container');
+
+    addToCartButtons.forEach((button, index) => {
+        button.addEventListener('click', (event) => {
+            event.preventDefault();
+            const productRow = button.closest('.row');
+            const productName = productRow.querySelector('.price h4').innerText;
+            const productPrice = productRow.querySelector('.price p').innerText;
+            const productImage = productRow.querySelector('img').src;
+            const quantity = parseInt(productRow.querySelector('#quantityInput').value) || 1; // Get quantity from input field
+            
+            addToCart({ name: productName, price: productPrice, image: productImage, quantity: quantity });
+        });
+    });
+
+    cartContainer.addEventListener('click', () => {
+        document.querySelector('.sidebar').classList.toggle('active');
+    });
+
+    updateCartCount();
+});
+            </script>
+            
+
+        </body>
+        </html>
